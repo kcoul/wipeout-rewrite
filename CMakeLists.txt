@@ -97,6 +97,7 @@ set(common_src
 add_executable(wipeout WIN32 ${common_src})
 set_property(TARGET wipeout PROPERTY C_STANDARD 11)
 target_include_directories(wipeout PRIVATE src)
+target_include_directories(wipeout PRIVATE /usr/local/Cellar/sdl2/2.28.2/include)
 target_include_directories(wipeout SYSTEM PRIVATE src/libs)
 target_compile_options(wipeout PRIVATE
 	$<$<CXX_COMPILER_ID:MSVC>:/W4>
